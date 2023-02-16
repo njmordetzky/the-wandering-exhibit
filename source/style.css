@@ -1,1 +1,11 @@
-style.css
+body {
+  background-color: #d0dae4;
+}
+
+h1 {
+  color: #647e75;
+  font-family: monospace;
+  text-align: center;
+  font-size: 80px;
+  line-height: 120px;
+}
