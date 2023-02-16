@@ -204,7 +204,7 @@ https://api.instagram.com/oauth/authorize
   & scope=user_profile, user_media
   & response_type=code
 
-Fill in variables like this:  
+Fill in variables like this:
 
 https://api.instagram.com/oauth/authorize
   ? client_id = 509631933891140
@@ -214,7 +214,7 @@ https://api.instagram.com/oauth/authorize
 
 And Minify if necessary like this:
 
-  https://api.instagram.com/oauth/authorize?client_id=509631933891140&redirect_uri=https://nathanielmordetzky.com/&scope=user_profile,user_media&response_type=code
+https://api.instagram.com/oauth/authorize?client_id=509631933891140&redirect_uri=https://nathanielmordetzky.com/&scope=user_profile,user_media&response_type=code
 
 Your authorization code will be appended to your redirect URL.It's the characters between code={this is your authorization code}#_ , so remember to remove #_ to get the final code.
 
@@ -234,13 +234,13 @@ https://api.instagram.com/oauth/access_token \
 -F redirect_uri = { redirect- uri} \
 -F code = { code }
 
-curl -X POST \
-  https://api.instagram.com/oauth/access_token \
-  -F client_id=509631933891140 \
-  -F client_secret=9720491097a3b7d940e619096dc1118f \
-  -F grant_type=authorization_code \
-  -F redirect_uri=https://nathanielmordetzky.com/ \
-  -F code=AQBx_qidvGqGYGuCjxwhPmbNNQfT6pUn0 - fai6M6pkuxC4A2YzqynGv9DeUbKRjVtb2_bIMVu1EiXc45Vek2Gmn5pejsVQ - DW4_ebOs9yDGJopZH - J8Y8GEo5rkTGHZtfi8XbUtOBMoBDmE2TOghj8782vW6i9BSZhWwHoxvhWdfhx1 - gdfMvxAuxvLFDF - tPsmAyuktbVdbmI47--DZ_moixYd4GwoXySqkhGOiTUerYQ
+curl - X POST \
+https://api.instagram.com/oauth/access_token \
+-F client_id = 509631933891140 \
+-F client_secret = 9720491097a3b7d940e619096dc1118f \
+-F grant_type = authorization_code \
+-F redirect_uri = https://nathanielmordetzky.com/ \
+-F code = AQBx_qidvGqGYGuCjxwhPmbNNQfT6pUn0 - fai6M6pkuxC4A2YzqynGv9DeUbKRjVtb2_bIMVu1EiXc45Vek2Gmn5pejsVQ - DW4_ebOs9yDGJopZH - J8Y8GEo5rkTGHZtfi8XbUtOBMoBDmE2TOghj8782vW6i9BSZhWwHoxvhWdfhx1 - gdfMvxAuxvLFDF - tPsmAyuktbVdbmI47--DZ_moixYd4GwoXySqkhGOiTUerYQ
 
 3. Get the returned access token and test it:
 
@@ -266,9 +266,9 @@ this should return a json object like this
 4. Exchange this for a 60 day Long Lived access token:
 
 "https://graph.instagram.com/access_token
-  ?grant_type=ig_exchange_token
-  &client_secret={instagram-app-secret}
-  &access_token={short-lived-access-token}"
+  ? grant_type = ig_exchange_token
+  & client_secret={ instagram - app - secret }
+  & access_token={ short - lived - access - token } "
 
 Fill in the { placeholders } and paste it in to your browser's search bar:
 https://graph.instagram.com/access_token
@@ -288,12 +288,12 @@ This should return a json object like this
 
 { --REFRESH LONG LIVED ACCESS TOKEN-- }
 
-Refresh a long-lived Instagram User Access Token that is at least 24 hours old but has not expired. Refreshed tokens are valid for 60 days from the date at which they are refreshed.
+Refresh a long - lived Instagram User Access Token that is at least 24 hours old but has not expired.Refreshed tokens are valid for 60 days from the date at which they are refreshed.
 
 Fill in the blank and paste this into your browser's search bar:
 https://graph.instagram.com/refresh_access_token
-  ?grant_type=ig_refresh_token
-  &access_token={long-lived-access-token}
+  ? grant_type = ig_refresh_token
+  & access_token={ long - lived - access - token }
 
 { --REFRESH LONG LIVED ACCESS TOKEN - END-- }
 
@@ -306,16 +306,17 @@ https://graph.instagram.com/me?access_token=ACCESS-TOKEN
 
 
 { --MY STUFF FOR TODAY-- }
-"access_token": "IGQVJWWFJoa3hBTUxoVXhIaS02ZA1drYU01bHg0c3pZAU3ZAwbHoxd1hTb0lUN0JkdTNMV3p3RkRQb0QyN1g1bmc5VDRZAVncxR0p4RXlYQWI5RDNRTnJCempvZAFE1UWE3LVBZAZAVd0WnBKcHpqS01JTWRpWm1XMFNhT0RfLVpN", 
-"user_id": 17841403152081781
+"access_token": "IGQVJWWFJoa3hBTUxoVXhIaS02ZA1drYU01bHg0c3pZAU3ZAwbHoxd1hTb0lUN0JkdTNMV3p3RkRQb0QyN1g1bmc5VDRZAVncxR0p4RXlYQWI5RDNRTnJCempvZAFE1UWE3LVBZAZAVd0WnBKcHpqS01JTWRpWm1XMFNhT0RfLVpN",
+  "user_id": 17841403152081781
 
 "id": "5663694586990910",
-"username": "njmordetzky"
+  "username": "njmordetzky"
 
 "access_token": "IGQVJYemJ6bHV4X0swLXBRNEVoT1VQT3I4QmVTUC1fSmNFWV85TU9YSmVSbzJrOWp6cTRsN0o0VXNEZAzVCeWhBbHpNWGQwMnVGOFlfdEhLY29UU0hESndPXzRzbGYwa0dYRTRBQzNR",
-"token_type": "bearer",
-"expires_in": 5184000
+  "token_type": "bearer",
+    "expires_in": 5184000
 
 "id": "5663694586990910"
 
 { --MY STUFF FOR TODAY - END-- }
+
